@@ -3,14 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Header from "./Header";
-import {
-    Typography,
-    Card,
-    CardContent,
-    CardActions,
-    Button
-} from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Paper, Typography } from "@material-ui/core";
 
 const styles = theme => ({
     root: {
@@ -24,22 +17,7 @@ const styles = theme => ({
     }
 });
 
-function RoomCard(props) {
-    return (
-        <Card>
-            <CardContent>
-                <Typography>Word of the Day</Typography>
-            </CardContent>
-            <CardActions>
-                <Button color="primary" size="small">
-                    <Link to="/rooms/1">Join</Link>
-                </Button>
-            </CardActions>
-        </Card>
-    );
-}
-
-function Home(props) {
+function Room(props) {
     const { classes, user } = props;
     return (
         <React.Fragment>
@@ -51,15 +29,18 @@ function Home(props) {
                 direction="row"
                 className={classes.root}
             >
-                <RoomCard></RoomCard>
+                <Paper>
+                    <Typography component="p">message1</Typography>
+                    <Typography component="p">message2</Typography>
+                </Paper>
                 <Grid className={classes.caption}></Grid>
             </Grid>
         </React.Fragment>
     );
 }
 
-Home.propTypes = {
+Room.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Room);
