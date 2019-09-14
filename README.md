@@ -21,7 +21,7 @@ const firebaseConfig = {
 export default firebaseConfig;
 ```
 
-9. Replace the word "skelton-us" in .firebaserc file with your Firebase project name.
+9. Replace the word "workroom" in .firebaserc file with your Firebase project name.
 10. Open the firebase console, and create a Cloud Firestore (make it "secure" for now).
 
 ## Available Scripts
